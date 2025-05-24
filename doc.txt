@@ -1,0 +1,11 @@
+Type	Description	Exemple
+feat	Nouvelle fonctionnalité	feat: ajouter la recherche
+fix	Correction de bug	fix: corriger le bug de login
+docs	Mise à jour de la documentation	docs: ajouter la doc du composant Navbar
+style	Changements qui n'affectent pas la logique (formatage, espaces, etc.)	style: corriger l'indentation
+refactor	Refactorisation sans changement de fonctionnalité	refactor: simplifier le code de gestion utilisateur
+perf	Amélioration des performances	perf: optimiser la requête API
+test	Ajout ou modification des tests	test: ajouter test unitaire pour Auth
+chore	Tâches diverses (build, configuration, etc.)	chore: mettre à jour les dépendances
+
+q miala git branch
