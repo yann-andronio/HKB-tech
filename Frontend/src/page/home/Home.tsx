@@ -15,7 +15,7 @@ const Home: React.FC = () => {
           <div className="deco1">
             <motion.img
               src="./image/robot1.png"
-              className="absolute w-60 top-[27%] left-[8%]"
+              className="absolute hidden sm:block sm:w-28 sm:top-[27%] lg:block lg:w-60 lg:top-[27%] lg:left-[8%]"
               animate={{
                 y: [0, -15, 0],
               }}
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
               }}
             />
             <motion.div
-              className="absolute top-[30%] right-[25%]"
+              className="absolute hidden sm:block sm:top-[15%] sm:right-[5%] lg:block lg:top-[30%] lg:right-[25%]"
               animate={{
                 rotate: [0, 360],
                 scale: [0.8, 1.3, 0.8],
@@ -42,9 +42,9 @@ const Home: React.FC = () => {
             <motion.img
               src="./image/cle.png"
               alt="Clé"
-              className="absolute rotate-90 w-64 bottom-[15%] right-[9%]"
+              className="absolute hidden sm:block sm:w-32 sm:bottom-[52%] sm:right-[4%] lg:block  rotate-90 lg:w-64 lg:bottom-[15%]  lg:right-[9%]"
               animate={{
-                rotate: [85, 95, 85], 
+                rotate: [85, 95, 85],
                 y: [0, -10, 0],
               }}
               transition={{
