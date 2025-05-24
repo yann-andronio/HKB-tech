@@ -2,20 +2,21 @@ import Herosection from "../../components/herosection/Herosection";
 import Navbar from "../../components/navbar/Navbar";
 import { BsStars } from "react-icons/bs";
 import { motion } from "framer-motion";
-
+import { IoMdArrowRoundDown } from "react-icons/io";
+import Apropos from "../../components/apropos/Apropos";
 const Home: React.FC = () => {
   return (
     <>
       <section>
         <header
-          className=" relative bg-cover bg-center min-h-screen pt-6 dark:bg-fond-degradedark bg-fond-degradelight "
+          className=" relative bg-cover bg-center lg:min-h-screen pt-6 dark:bg-fond-degradedark bg-fond-degradelight "
           // style={{ backgroundImage: "url('../../../public/image/fondheader.png')" }}
         >
           <Navbar />
           <div className="deco1">
             <motion.img
               src="./image/robot1.png"
-              className="absolute hidden sm:block sm:w-28 sm:top-[27%] lg:block lg:w-60 lg:top-[27%] lg:left-[8%]"
+              className="absolute hidden sm:block sm:w-28 sm:top-[54%] lg:block lg:w-60 lg:top-[27%] lg:left-[8%]"
               animate={{
                 y: [0, -15, 0],
               }}
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
               }}
             />
             <motion.div
-              className="absolute hidden sm:block sm:top-[15%] sm:right-[5%] lg:block lg:top-[30%] lg:right-[25%]"
+              className="absolute hidden sm:block sm:top-[37%] sm:right-[5%] lg:block lg:top-[30%] lg:right-[25%]"
               animate={{
                 rotate: [0, 360],
                 scale: [0.8, 1.3, 0.8],
@@ -42,7 +43,7 @@ const Home: React.FC = () => {
             <motion.img
               src="./image/cle.png"
               alt="Clé"
-              className="absolute hidden sm:block sm:w-32 sm:bottom-[52%] sm:right-[4%] lg:block  rotate-90 lg:w-64 lg:bottom-[15%]  lg:right-[9%]"
+              className="absolute hidden sm:block sm:w-32 sm:bottom-[10%] sm:right-[4%] lg:block  rotate-90 lg:w-64 lg:bottom-[15%]  lg:right-[9%]"
               animate={{
                 rotate: [85, 95, 85],
                 y: [0, -10, 0],
@@ -56,6 +57,29 @@ const Home: React.FC = () => {
           </div>
           <Herosection />
         </header>
+        <main className="dark:bg-fondprincipal-degradedark min-h-screen bg-fondprincipal-degradelight">
+          <motion.div
+            className="flex justify-center items-center flex-col gap-1"
+            animate={{
+              y: [0, -15, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <p className="uppercase text-sm sm:text-base tracking-widest mt-[6rem] lg:mt-0 md:mt-12 text-bg-black/30 dark:text-white font-semibold   px-4 py-2  ">
+              Découverte rapide
+            </p>
+
+            <IoMdArrowRoundDown
+              size={25}
+              className="font-bold text-yellow-500"
+            />
+          </motion.div>
+          <Apropos/>
+        </main>
       </section>
     </>
   );
