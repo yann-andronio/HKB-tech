@@ -35,7 +35,7 @@ const Faq = () => {
   };
 
   return (
-    <div id="FAQ" className="max-w-4xl min-h-screen mx-auto py-12 px-4">
+    <div id="FAQ" className="max-w-4xl  mx-auto py-12 px-4">
       <h2 className="text-3xl md:text-4xl text-center font-bold text-gray-900 dark:text-white mb-4">
         <span className="inline-flex items-center gap-2">
           <FiHelpCircle className="text-4xl" />

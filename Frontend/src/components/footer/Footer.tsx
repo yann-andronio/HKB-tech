@@ -27,7 +27,7 @@ const sociallinks = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className=" text-gray-800 dark:text-gray-200 px-6 py-12">
+    <footer className=" text-gray-800 mt-28 dark:text-gray-200 px-6 py-12">
       <div className="max-w-full mx-auto  grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           {/* ty nle robo 3d */}
