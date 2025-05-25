@@ -31,22 +31,22 @@ const Footer: React.FC = () => {
       <div className="max-w-full mx-auto  grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
           {/* ty nle robo 3d */}
-          <div className="w-full h-48 relative bg-white/10 dark:bg-white/5 rounded-lg flex items-center justify-center text-gray-400 text-sm border border-gray-300 dark:border-gray-600">
-            <Canvas camera={{ position: [0, 100, 500], fov: 45 }}>
+          <div className="w-full min-h-[300px] relative bg-white/10 dark:bg-white/5 rounded-lg flex items-center justify-center text-gray-400 text-sm border border-gray-300 dark:border-gray-600">
+            <Canvas camera={{ position: [0, 200, 500], fov: 45 }}>
               <ambientLight intensity={0.5} />
               <directionalLight position={[5, 5, 5]} intensity={1} />
               <Center>
                 <Robo3D />
               </Center>
-
               <OrbitControls
                 enableZoom={true}
                 minDistance={4}
-                maxDistance={175}
+                maxDistance={200}
               />
               <Environment preset="sunset" />
             </Canvas>
-            <a href="/"
+            <a
+              href="/"
               className="text-2xl absolute top-0 left-4 font-extrabold text-gray-900 dark:text-white select-none"
             >
               HKB<span className="text-yellow-500"> Tech</span>

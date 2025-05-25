@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { FiHelpCircle, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { useState } from "react";
+import { FiHelpCircle } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
-import { BsPlus } from "react-icons/bs";
 import { FaMinusCircle , FaPlusCircle } from "react-icons/fa";
 
 const faqData = [
@@ -46,10 +45,10 @@ const Faq = () => {
       <div className="space-y-4 mt-16">
         {faqData.map((item, index) => (
           <div
-            data-aos="fade-up" 
+            data-aos="fade-up"
             data-aos-delay={index * 100}
             key={index}
-            className="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#212529] shadow-md transition duration-300"
+            className="rounded-xl border border-gray-300 dark:bg-gray-800 bg-white  shadow-md transition duration-300"
           >
             <button
               onClick={() => toggleQuestion(index)}
@@ -72,7 +71,7 @@ const Faq = () => {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="px-6 py-4 rounded-xl text-gray-700 dark:text-gray-300 text-sm leading-relaxed bg-gray-50 dark:bg-[#2b2b2b]">
+                  <div className="px-6 py-4 rounded-xl text-gray-700 dark:text-gray-300 text-sm leading-relaxed bg-gray-50 dark:bg-gray-800">
                     {item.answer}
                   </div>
                 </motion.div>

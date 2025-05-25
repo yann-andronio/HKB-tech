@@ -13,6 +13,7 @@ const Home: React.FC = () => {
   return (
     <>
       <section>
+        
         <header
           className=" relative bg-cover bg-center lg:min-h-screen pt-6 dark:bg-fond-degradedark bg-fond-degradelight "
           // style={{ backgroundImage: "url('../../../public/image/fondheader.png')" }}

@@ -17,5 +17,5 @@ export default function Robo3D() {
     }
   });
 
-  return <primitive ref={ref} object={scene} scale={0.3} />;
+  return <primitive ref={ref} object={scene} scale={0.5} />;
 }
