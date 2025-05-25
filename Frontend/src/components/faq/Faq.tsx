@@ -46,6 +46,8 @@ const Faq = () => {
       <div className="space-y-4 mt-16">
         {faqData.map((item, index) => (
           <div
+            data-aos="fade-up" 
+            data-aos-delay={index * 100}
             key={index}
             className="rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#212529] shadow-md transition duration-300"
           >
