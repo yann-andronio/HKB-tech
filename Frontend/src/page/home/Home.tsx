@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import Apropos from "../../components/apropos/Apropos";
 import Pub from "../../components/pub/Pub";
+import Service from "../../components/service/Service";
 const Home: React.FC = () => {
   return (
     <>
@@ -80,7 +81,8 @@ const Home: React.FC = () => {
             />
           </motion.div>
           <Apropos />
-          <Pub/>
+          <Pub />
+          <Service />
         </main>
       </section>
     </>
