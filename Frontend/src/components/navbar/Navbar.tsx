@@ -3,6 +3,8 @@ import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import Responsivenavbar from "../responsivenavbar/Responsivenavbar";
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -28,7 +30,7 @@ const Navbar: React.FC = () => {
   const [menuopen, setmenuopen] = useState<boolean>(false);
 
   return (
-    <nav className="w-full bg-transparent dark:bg-transparent   ">
+    <nav id="Accueil" className="w-full bg-transparent dark:bg-transparent   ">
       <div className="max-w-full mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
@@ -42,15 +44,20 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex space-x-10  text-gray-900 dark:text-gray-100 px-8 py-3 ">
-            {["Accueil", "A propos", "Services", "Contact", "FAQ"].map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="font-semibold hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors duration-300"
-              >
-                {t(item)}
-              </a>
-            ))}
+            {["Accueil", "A propos", "Services", "Contact", "FAQ"].map(
+              (item) => (
+                <ScrollLink
+                  key={item}
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className="font-semibold cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors duration-300"
+                >
+                  {t(item)}
+                </ScrollLink>
+              )
+            )}
           </div>
 
           <div className="flex items-center space-x-6">

@@ -37,9 +37,9 @@ const Contact: React.FC = () => {
 
   return (
     <Fragment>
-      <div className=" relative text-center mb-16 lg:mt-10">
+      <div id="Contact" className=" relative text-center mb-16 lg:mt-10">
         <motion.div
-          className="absolute hidden sm:block sm:top-[37%]  lg:block lg:top-[-15%] lg:right-[37%]"
+          className="absolute hidden md:block md:top-[-15%] md:right-[28%]  lg:block lg:top-[-15%] lg:right-[37%]"
           animate={{
             rotate: [0, 360],
             scale: [0.8, 1.3, 0.8],
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="flex items-center gap-2 bg-yellow-400  hover:bg-[#666] transition duration-300 text-black px-6 py-3 rounded-lg font-semibold shadow-md"
+              className="flex items-center gap-2 bg-yellow-400 dark:bg-yellow-500  hover:bg-yellow-500 dark:hover:bg-yellow-600  transition duration-300 text-black px-6 py-3 rounded-lg font-semibold shadow-md"
             >
               <IoIosSend className="text-xl" />
               Envoyer le message

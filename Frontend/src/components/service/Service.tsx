@@ -26,7 +26,7 @@ const Service: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-20 px-6 mt-12  ">
+    <section id="Services" className="relative py-20 px-6 mt-6  ">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Nos Services
@@ -46,20 +46,20 @@ const Service: React.FC = () => {
           ease: "easeInOut",
         }}
       />
-      <motion.div
-        className="absolute hidden sm:block sm:top-[37%]  lg:block lg:top-[7.5%] lg:left-[37%]"
-        animate={{
-          rotate: [0, 360],
-          scale: [0.8, 1.3, 0.8],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-        <BsStars size={40} className="text-black dark:text-white" />
-      </motion.div>
+     <motion.div
+          className="absolute hidden md:block md:top-[5%] md:left-[30%]  lg:block lg:top-[7.5%] lg:left-[38%]"
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.3, 0.8],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <BsStars size={40} className="text-black dark:text-white" />
+        </motion.div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
         {services.map((service, index) => (

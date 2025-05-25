@@ -7,6 +7,8 @@ import Apropos from "../../components/apropos/Apropos";
 import Pub from "../../components/pub/Pub";
 import Service from "../../components/service/Service";
 import Contact from "../../components/contact/Contact";
+import Faq from "../../components/faq/Faq";
+import Footer from "../../components/footer/Footer";
 const Home: React.FC = () => {
   return (
     <>
@@ -85,6 +87,8 @@ const Home: React.FC = () => {
           <Pub />
           <Service />
           <Contact />
+          <Faq />
+          <Footer/>
         </main>
       </section>
     </>
