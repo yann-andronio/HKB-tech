@@ -4,6 +4,11 @@ import { BsStars } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import Apropos from "../../components/apropos/Apropos";
+import Pub from "../../components/pub/Pub";
+import Service from "../../components/service/Service";
+import Contact from "../../components/contact/Contact";
+import Faq from "../../components/faq/Faq";
+import Footer from "../../components/footer/Footer";
 const Home: React.FC = () => {
   return (
     <>
@@ -78,7 +83,12 @@ const Home: React.FC = () => {
               className="font-bold text-yellow-500"
             />
           </motion.div>
-          <Apropos/>
+          <Apropos />
+          <Pub />
+          <Service />
+          <Contact />
+          <Faq />
+          <Footer/>
         </main>
       </section>
     </>

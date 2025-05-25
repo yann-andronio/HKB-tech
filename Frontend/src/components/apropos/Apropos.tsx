@@ -32,7 +32,7 @@ const values = [
 
 const Apropos: React.FC = () => {
   return (
-    <section className=" mt-8 lg:mt-9  lg:py-24 px-6">
+    <section id="A propos" className=" mt-8 lg:mt-9  lg:py-24 px-6">
       <div className="max-w-7xl mx-auto lg:flex lg:items-start lg:gap-20">
         <div className="lg:w-1/2 text-gray-900 dark:text-gray-100">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
