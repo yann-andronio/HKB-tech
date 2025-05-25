@@ -46,27 +46,29 @@ const Service: React.FC = () => {
           ease: "easeInOut",
         }}
       />
-     <motion.div
-          className="absolute hidden md:block md:top-[5%] md:left-[30%]  lg:block lg:top-[7.5%] lg:left-[38%]"
-          animate={{
-            rotate: [0, 360],
-            scale: [0.8, 1.3, 0.8],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        >
-          <BsStars size={40} className="text-black dark:text-white" />
-        </motion.div>
+      <motion.div
+        className="absolute hidden md:block md:top-[5%] md:left-[30%]  lg:block lg:top-[7.5%] lg:left-[38%]"
+        animate={{
+          rotate: [0, 360],
+          scale: [0.8, 1.3, 0.8],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        <BsStars size={40} className="text-black dark:text-white" />
+      </motion.div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
         {services.map((service, index) => (
-          <motion.div
+          <div
             key={index}
-            className="bg-[#f5f5f5]  dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-default"
-            whileHover={{ y: -8 }}
+            className="bg-[#f5f5f5] dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-default"
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
+            data-aos-duration="600"
           >
             <div className="mb-4 flex items-center justify-center w-12 h-12 p-3 dark:bg-white dark:rounded-full">
               {service.icon}
@@ -77,7 +79,7 @@ const Service: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               {service.description}
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

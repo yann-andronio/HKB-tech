@@ -38,6 +38,7 @@ const Herosection: React.FC = () => {
 
         <button className="relative inline-flex items-center justify-center gap-2 px-7 py-3 overflow-hidden font-semibold border border-blue-700 dark:border-white text-blue-700 dark:text-white rounded-lg transition duration-300 ease-in-out hover:bg-blue-50 dark:hover:bg-white/10 hover:scale-105">
           <ScrollLink
+            
             to={"Contact"}
             smooth={true}
             duration={500}
