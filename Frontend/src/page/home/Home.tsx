@@ -4,6 +4,7 @@ import { BsStars } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import Apropos from "../../components/apropos/Apropos";
+import Pub from "../../components/pub/Pub";
 const Home: React.FC = () => {
   return (
     <>
@@ -78,7 +79,8 @@ const Home: React.FC = () => {
               className="font-bold text-yellow-500"
             />
           </motion.div>
-          <Apropos/>
+          <Apropos />
+          <Pub/>
         </main>
       </section>
     </>

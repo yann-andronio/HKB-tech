@@ -18,7 +18,7 @@ const Herosection: React.FC = () => {
       <div className="mb-10 text-lg sm:text-xl text-gray-700 dark:text-gray-300 space-y-1">
         <p>{t("gateway")}</p>
         <p>{t("boldDigital")}</p>
-      </div>
+      </div>      
 
       <div className="flex flex-col sm:flex-row gap-4">
         <button className="relative inline-flex items-center justify-center gap-2 px-7 py-3 overflow-hidden text-white font-semibold transition duration-300 ease-in-out bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-md hover:scale-105">
