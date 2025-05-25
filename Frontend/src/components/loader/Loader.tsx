@@ -76,14 +76,14 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
     >
       <motion.div
         {...starAnimation}
-        className="absolute top-10 left-8 md:block md:top-[20%] md:left-[30%] lg:top-[20%] lg:left-[30%]"
+        className="absolute top-10 left-8 md:block md:top-[10%] md:left-[30%] lg:top-[5%] lg:left-[30%]"
       >
         <BsStars size={40} className="text-white" />
       </motion.div>
 
       <motion.div
         {...starAnimation}
-        className="absolute top-10 right-8 md:block md:top-[20%] md:right-[30%] lg:top-[20%] lg:right-[30%]"
+        className="absolute top-10 right-8 md:block md:top-[10%] md:right-[30%] lg:top-[5%] lg:right-[30%]"
       >
         <BsStars size={40} className="text-white" />
       </motion.div>
