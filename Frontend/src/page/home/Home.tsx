@@ -6,6 +6,7 @@ import { IoMdArrowRoundDown } from "react-icons/io";
 import Apropos from "../../components/apropos/Apropos";
 import Pub from "../../components/pub/Pub";
 import Service from "../../components/service/Service";
+import Contact from "../../components/contact/Contact";
 const Home: React.FC = () => {
   return (
     <>
@@ -83,6 +84,7 @@ const Home: React.FC = () => {
           <Apropos />
           <Pub />
           <Service />
+          <Contact />
         </main>
       </section>
     </>
