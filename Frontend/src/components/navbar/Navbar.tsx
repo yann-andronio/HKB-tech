@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex space-x-10  text-gray-900 dark:text-gray-100 px-8 py-3 ">
-            {["home", "services", "contact", "about", "projet"].map((item) => (
+            {["home", "services", "contact", "about", "project"].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
