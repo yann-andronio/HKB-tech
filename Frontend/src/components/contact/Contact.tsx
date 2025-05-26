@@ -33,7 +33,8 @@ const Contact: React.FC = () => {
     SetloadingMap(false);
   };
 
-  const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1761.062637291801!2d47.556397578627234!3d-18.922108120840083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07d007a174a47%3A0x62a155fa55d89cce!2sJao's%20Pub!5e0!3m2!1sfr!2smg!4v1726839371820!5m2!1sfr!2smg";
+  const mapUrl =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1761.062637291801!2d47.556397578627234!3d-18.922108120840083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07d007a174a47%3A0x62a155fa55d89cce!2sJao's%20Pub!5e0!3m2!1sfr!2smg!4v1726839371820!5m2!1sfr!2smg";
 
   return (
     <Fragment>

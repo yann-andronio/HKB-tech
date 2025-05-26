@@ -77,9 +77,9 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex space-x-10  text-gray-900 dark:text-gray-100 px-8 py-3 ">
             {["Accueil", "A propos", "Services", "Contact", "FAQ"].map(
-              (item) => (
+              (item, index) => (
                 <ScrollLink
-                  key={item}
+                  key={index}
                   to={item}
                   smooth={true}
                   duration={500}
