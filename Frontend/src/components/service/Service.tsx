@@ -23,8 +23,7 @@ const services = [
 ];
 
 const Service: React.FC = () => {
-  const { t } = useTranslation();
-
+ const { t } = useTranslation();
   return (
     <section id="Services" className="relative py-20 px-6 mt-6">
   <div className="text-center mb-16">

@@ -41,21 +41,28 @@ const Contact: React.FC = () => {
 
   return (
     <Fragment>
-  <div id="Contact" className="relative text-center mb-16 lg:mt-10">
-    <motion.div
-      className="absolute hidden md:block md:top-[-15%] md:right-[28%] lg:block lg:top-[-15%] lg:right-[37%]"
-      animate={{ rotate: [0, 360], scale: [0.8, 1.3, 0.8] }}
-      transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
-    >
-      <BsStars size={40} className="text-black dark:text-white" />
-    </motion.div>
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-      {t("Contactez-Nous")}
-    </h2>
-    <p className="text-lg text-gray-600 dark:text-gray-300">
-      {t("Nous somme à votre écoute pour vos projets")}
-    </p>
-  </div>
+      <div id="Contact" className=" relative text-center mb-16 lg:mt-10">
+        <motion.div
+          className="absolute hidden md:block md:top-[-15%] md:right-[28%]  lg:block lg:top-[-15%] lg:right-[37%]"
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.3, 0.8],
+          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        >
+          <BsStars size={40} className="text-black dark:text-white" />
+        </motion.div>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          Contactez-Nous
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          Nous somme à votre écoute pour vos projets
+        </p>
+      </div>
 
   <div className="h-[400px] w-full relative flex justify-center items-center flex-col">
     <div className="flex justify-center items-center w-[90%] lg:w-[60%] h-full">

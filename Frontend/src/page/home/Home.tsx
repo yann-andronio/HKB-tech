@@ -10,6 +10,7 @@ import Contact from "../../components/contact/Contact";
 import Faq from "../../components/faq/Faq";
 import Footer from "../../components/footer/Footer";
 import { useTranslation } from "react-i18next";
+import Projets from "../../components/projets/Projets";
 const Home: React.FC = () => {
   const { t } = useTranslation();
   return (
@@ -89,6 +90,7 @@ const Home: React.FC = () => {
           <Apropos />
           <Pub />
           <Service />
+          <Projets/>
           <Contact />
           <Faq />
           <Footer/>

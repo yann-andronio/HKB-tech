@@ -4,7 +4,7 @@ import { IoLanguage } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import Responsivenavbar from "../responsivenavbar/Responsivenavbar";
 import confetti from "canvas-confetti";
-
+import { Link as ScrollLink } from "react-scroll";
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
 
@@ -75,15 +75,21 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex space-x-10  text-gray-900 dark:text-gray-100 px-8 py-3 ">
-            {["home", "services", "contact", "about", "project"].map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="font-semibold hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors duration-300"
-              >
-                {t(item)}
-              </a>
-            ))}
+
+            {["Accueil", "A propos", "Services","Projets" ,  "Contact", "FAQ"].map(
+              (item, index) => (
+                <ScrollLink
+                  key={index}
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className="font-semibold cursor-pointer hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors duration-300"
+                >
+                  {t(item)}
+                </ScrollLink>
+              )
+            )}
           </div>
 
           <div className="flex items-center space-x-6">
