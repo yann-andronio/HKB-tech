@@ -1,5 +1,7 @@
 import React from "react";
 import { FaEye, FaLightbulb, FaBolt, FaHandsHelping } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
+
 
 const values = [
   {
@@ -32,33 +34,59 @@ const values = [
 
 const Apropos: React.FC = () => {
   return (
-    <section className=" mt-8 lg:mt-9  lg:py-24 px-6">
+    <section id="A propos" className=" mt-8 lg:mt-9  lg:py-24 px-6">
       <div className="max-w-7xl mx-auto lg:flex lg:items-start lg:gap-20">
         <div className="lg:w-1/2 text-gray-900 dark:text-gray-100">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+          <h1
+            className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             Qui <span className="text-yellow-400">Sommes</span>-Nous ?
           </h1>
-          <p className="mb-6 text-lg leading-relaxed">
+
+          <p
+            className="mb-6 text-lg leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
             Chez <strong>HKB</strong>, nous sommes plus qu’une entreprise. Nous
             sommes une vision, une clé pour ouvrir les horizons de demain. Notre
             ambition est de transformer, innover et créer un impact durable.
           </p>
-          <p className="mb-10 text-lg leading-relaxed">
+
+          <p
+            className="mb-10 text-lg leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
             Découvrez comment <em>Horizon – Keys – Beyond</em> guide chacune de
             nos actions, avec passion et audace.
           </p>
-          <a
+
+          <ScrollLink
+            to="Services"
+            smooth={true}
+            duration={500}
+            offset={-60}
             href="#vision"
+            data-aos="zoom-in"
+            data-aos-delay="600"
             className="inline-block bg-yellow-400 dark:bg-yellow-500 text-gray-900 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-yellow-500 dark:hover:bg-yellow-600 transition-colors duration-300"
           >
             Découvrez notre sevice
-          </a>
+          </ScrollLink>
         </div>
 
         <div className="mt-20 lg:mt-0 lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {values.map(({ icon, title, description }) => (
+          {values.map(({ icon, title, description }, index) => (
             <div
               key={title}
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 200}
+              data-aos-duration="800"
               className="bg-[#f5f5f5] dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-default"
             >
               <div className="titreicon flex gap-4 dark:text-white">

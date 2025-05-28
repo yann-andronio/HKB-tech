@@ -3,6 +3,7 @@ import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import Responsivenavbar from "../responsivenavbar/Responsivenavbar";
+import confetti from "canvas-confetti";
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +18,39 @@ const Navbar: React.FC = () => {
     localStorage.setItem("thememode", String(darkMode));
   }, [darkMode]);
 
-  const btndarkMode = () => setDarkMode((prev) => !prev);
+  const btndarkMode = () => {
+    setDarkMode((prev) => !prev);
+
+    const end = Date.now() + 1 * 1000; 
+    const lightColors = ["#DDEDF4", "#B8D6E7", "#7EBBD5"];
+    const darkColors = ["#000C18", "#1F3C61", "#2A3A59"];
+    const colors = darkMode ? darkColors : lightColors;
+    const frame = () => {
+      if (Date.now() > end) return;
+
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors: colors,
+      });
+
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors: colors,
+      });
+
+      requestAnimationFrame(frame);
+    };
+
+    frame();
+  };
 
   const ManovaLanguage = () => {
     const newLang = i18n.language === "fr" ? "en" : "fr";
@@ -28,7 +61,7 @@ const Navbar: React.FC = () => {
   const [menuopen, setmenuopen] = useState<boolean>(false);
 
   return (
-    <nav className="w-full bg-transparent dark:bg-transparent   ">
+    <nav id="Accueil" className="w-full bg-transparent dark:bg-transparent   ">
       <div className="max-w-full mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out">
