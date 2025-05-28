@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Herosection: React.FC = () => {
 
-   const { t, i18n } = useTranslation();
+   const { t } = useTranslation();
   return (
     <section className="flex flex-col justify-center items-center text-center mt-16 sm:mt-28 lg:mt-40  px-4">
       <div className="mb-8">
