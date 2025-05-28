@@ -7,13 +7,14 @@ import {
 } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Center } from "@react-three/drei";
+import { OrbitControls, Center } from "@react-three/drei";
 import Robo3D from "../../threeDModel/Robo3D";
 
 const navigationLinks = [
   { name: "Accueil", id: "Accueil" },
   { name: "A propos", id: "A propos" },
   { name: "Services", id: "Services" },
+  { name: "Projets", id: "Projets" },
   { name: "Contact", id: "Contact" },
   { name: "FAQ", id: "FAQ" },
 ];
@@ -43,8 +44,7 @@ const Footer: React.FC = () => {
                 minDistance={4}
                 maxDistance={200}
               />
-              <Environment preset="sunset" />
-            </Canvas>
+             </Canvas>
             <a
               href="/"
               className="text-2xl absolute top-0 left-4 font-extrabold text-gray-900 dark:text-white select-none"

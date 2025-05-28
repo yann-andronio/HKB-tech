@@ -9,6 +9,7 @@ import Service from "../../components/service/Service";
 import Contact from "../../components/contact/Contact";
 import Faq from "../../components/faq/Faq";
 import Footer from "../../components/footer/Footer";
+import Projets from "../../components/projets/Projets";
 const Home: React.FC = () => {
   return (
     <>
@@ -87,6 +88,7 @@ const Home: React.FC = () => {
           <Apropos />
           <Pub />
           <Service />
+          <Projets/>
           <Contact />
           <Faq />
           <Footer/>

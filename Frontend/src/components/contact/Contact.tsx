@@ -38,9 +38,9 @@ const Contact: React.FC = () => {
 
   return (
     <Fragment>
-      <div id="Contact" className=" relative text-center mb-16 lg:mt-10">
+      <div id="Contact" className=" relative text-center mb-16 lg:mt-16">
         <motion.div
-          className="absolute hidden md:block md:top-[-15%] md:right-[28%]  lg:block lg:top-[-15%] lg:right-[37%]"
+          className="absolute hidden md:block md:top-[-15%] md:left-[27%]  lg:block lg:top-[-17%] lg:left-[37%]"
           animate={{
             rotate: [0, 360],
             scale: [0.8, 1.3, 0.8],
