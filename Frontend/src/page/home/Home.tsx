@@ -9,7 +9,9 @@ import Service from "../../components/service/Service";
 import Contact from "../../components/contact/Contact";
 import Faq from "../../components/faq/Faq";
 import Footer from "../../components/footer/Footer";
+import { useTranslation } from "react-i18next";
 const Home: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <>
       <section>
@@ -76,7 +78,7 @@ const Home: React.FC = () => {
             }}
           >
             <p className="uppercase text-sm sm:text-base tracking-widest mt-[6rem] lg:mt-0 md:mt-12 text-bg-black/30 dark:text-white font-semibold   px-4 py-2  ">
-              Découverte rapide
+              {t("Quick discovery")}
             </p>
 
             <IoMdArrowRoundDown

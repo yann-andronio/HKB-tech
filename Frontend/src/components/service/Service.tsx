@@ -26,63 +26,64 @@ const Service: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="Services" className="relative py-20 px-6 mt-6  ">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Nos Services
-        </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300">
-          Mélange parfait de conception intuitive et de technologie de pointe
+    <section id="Services" className="relative py-20 px-6 mt-6">
+  <div className="text-center mb-16">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      {t("Nos Services")}
+    </h2>
+    <p className="text-lg text-gray-600 dark:text-gray-300">
+      {t("Mélange parfait de conception intuitive et de technologie de pointe")}
+    </p>
+  </div>
+
+  <motion.img
+    src="./image/robot2.png"
+    className="absolute hidden lg:block lg:w-44 lg:top-[5%] lg:right-[6%]"
+    animate={{ y: [0, -20, 0] }}
+    transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
+  <motion.div
+    className="absolute hidden md:block md:top-[5%] md:left-[30%]  lg:block lg:top-[7.5%] lg:left-[38%]"
+    animate={{
+      rotate: [0, 360],
+      scale: [0.8, 1.3, 0.8],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+  >
+    <BsStars size={40} className="text-black dark:text-white" />
+  </motion.div>
+
+  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
+    {services.map((service, index) => (
+      <div
+        key={index}
+        className="bg-[#f5f5f5] dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-default"
+        data-aos="fade-up"
+        data-aos-delay={index * 200}
+        data-aos-duration="600"
+      >
+        <div className="mb-4 flex items-center justify-center w-12 h-12 p-3 dark:bg-white dark:rounded-full">
+          {service.icon}
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+          {t(service.title)}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300 text-sm">
+          {t(service.description)}
         </p>
       </div>
+    ))}
+  </div>
+</section>
 
-      <motion.img
-        src="./image/robot2.png"
-        className="absolute hidden lg:block lg:w-44 lg:top-[5%] lg:right-[6%]"
-        animate={{ y: [0, -20, 0] }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute hidden md:block md:top-[5%] md:left-[30%]  lg:block lg:top-[7.5%] lg:left-[38%]"
-        animate={{
-          rotate: [0, 360],
-          scale: [0.8, 1.3, 0.8],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      >
-        <BsStars size={40} className="text-black dark:text-white" />
-      </motion.div>
-
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10 relative">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-[#f5f5f5] dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow cursor-default"
-            data-aos="fade-up"
-            data-aos-delay={index * 200}
-            data-aos-duration="600"
-          >
-            <div className="mb-4 flex items-center justify-center w-12 h-12 p-3 dark:bg-white dark:rounded-full">
-              {service.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-              {service.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">
-              {service.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
   );
 };
 

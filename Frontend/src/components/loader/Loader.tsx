@@ -101,7 +101,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={titleControls}
       >
-        Bienvenue sur HKB Tech
+        welcom to HKB Tech
       </motion.h1>
 
       <motion.p
@@ -109,7 +109,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={sloganControls}
       >
-        L'innovation commence ici. Votre avenir numérique, entre nos mains.
+        Innovation starts here. Your digital future is in our hands.
       </motion.p>
 
       <motion.img
