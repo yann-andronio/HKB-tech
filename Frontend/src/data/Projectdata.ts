@@ -57,5 +57,31 @@ export const  Projectdata: Typeprojet[] = [
     image: "3",
   },
 
+  {
+    id: 4,
+    name: "Favorite music",
+    langageIcons: [
+      { icon: FaHtml5, color: "#E34F26" },
+      { icon: FaCss3Alt, color: "#1572B6" },
+      { icon: SiJavascript, color: "#F7DF1E" },
+      { icon: FaBootstrap, color: "#563D7C" },
+    ],
+    link: "",
+    image: "4",
+  },
+
+  {
+    id: 5,
+    name: "Agri Tech",
+    langageIcons: [
+      { icon: FaHtml5, color: "#E34F26" },
+      { icon: FaCss3Alt, color: "#1572B6" },
+      { icon: SiJavascript, color: "#F7DF1E" },
+      { icon: FaBootstrap, color: "#563D7C" },
+    ],
+    link: "",
+    image: "5",
+  },
+
 ];
 

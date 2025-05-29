@@ -57,10 +57,10 @@ const Contact: React.FC = () => {
           <BsStars size={40} className="text-black dark:text-white" />
         </motion.div>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Contactez-Nous
+          {t("Contactez-Nous")}
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          Nous somme à votre écoute pour vos projets
+          {t("Nous somme à votre écoute pour vos projets")}
         </p>
       </div>
 
