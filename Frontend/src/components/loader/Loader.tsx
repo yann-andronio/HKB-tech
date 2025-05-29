@@ -101,7 +101,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={titleControls}
       >
-        welcom to HKB Tech
+        Welcom to HKB Tech
       </motion.h1>
 
       <motion.p

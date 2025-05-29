@@ -15,7 +15,7 @@ const navigationLinks = [
   { name: "Accueil", id: "Accueil" },
   { name: "A propos", id: "A propos" },
   { name: "Services", id: "Services" },
-  { name: "Projets", id: "Projet" },
+  { name: "Projet", id: "Projet" },
   { name: "Contact", id: "Contact" },
   { name: "FAQ", id: "FAQ" },
 ];
