@@ -1,19 +1,30 @@
 import { motion } from "framer-motion";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BsStars } from "react-icons/bs";
 import { IoIosSend } from "react-icons/io";
 import { MoonLoader } from "react-spinners";
+import emailjs from 'emailjs-com';
 
 interface Inputs {
-  fullname?: string;
+  name?: string;
   email?: string;
-  textarea?: string;
+  title?: string;
+  message?: string;
 }
+
+const initialFormState: Inputs = {
+  name: "",
+  email: "",
+  title: "",
+  message: "",
+};
+
 
 const Contact: React.FC = () => {
   const [inputs, setinputs] = useState<Inputs>({});
   const [loadingMap, SetloadingMap] = useState<boolean>(true);
+  const [checkMail, setCheckMail] = useState<boolean>(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,10 +35,24 @@ const Contact: React.FC = () => {
       [name]: value,
     }));
   };
-
+  const form = useRef<HTMLFormElement>(null);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(inputs.fullname);
+    if (!form.current) return;
+    emailjs.sendForm(
+      'service_f870c5e',
+      'template_qaros1h',
+      form.current,
+      'fFcw9JILcWYmDx1hH'
+    ).then((result) => {
+        console.log(result.text);
+        //alert("Email envoyé !");
+        setinputs(initialFormState);
+        setCheckMail(true);
+    }, (error) => {
+        console.log(error.text);
+        //alert("Erreur : " + error.text);
+    });
   };
 
   const handleImageLoad = () => {
@@ -89,14 +114,15 @@ const Contact: React.FC = () => {
     <h2 className="text-3xl font-semibold text-white dark:text-[#f1f1f1] mb-6">
       {t("Formulaire de contact")}
     </h2>
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form ref={form} onSubmit={handleSubmit} className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <input
           type="text"
-          name="fullname"
+          name="name"
           placeholder={t("Nom et prénom")}
           className="flex-1 px-4 py-3 rounded-lg border dark:bg-gray-800 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7EBBD5]"
           onChange={handleChange}
+          value={inputs.name}
           required
         />
         <input
@@ -105,18 +131,30 @@ const Contact: React.FC = () => {
           placeholder={t("Adresse email")}
           className="flex-1 px-4 py-3 rounded-lg border dark:bg-gray-800 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7EBBD5]"
           onChange={handleChange}
+          value={inputs.email}
+          required
+        />
+
+        <input
+          type="text"
+          name="title"
+          placeholder={t("Titre")}
+          className="flex-1 px-4 py-3 rounded-lg border dark:bg-gray-800 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7EBBD5]"
+          onChange={handleChange}
+          value={inputs.title}
           required
         />
       </div>
 
       <textarea
-        name="textarea"
+        name="message"
         placeholder={t("Écrivez votre message...")}
         rows={5}
         className="w-full px-4 py-3 rounded-lg border dark:bg-gray-800 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#7EBBD5]"
         onChange={handleChange}
         required
-      ></textarea>
+        value={inputs.message}
+      />
 
       <div className="flex justify-end">
         <button
@@ -130,7 +168,7 @@ const Contact: React.FC = () => {
     </form>
 
     <div className="text-center mt-6 mb-12 text-base text-gray-600 px-6 py-4 dark:text-gray-300 dark:border-gray-600 max-w-xl mx-auto">
-      {t("Merci pour votre message ! Nous vous répondrons dès que possible.")}
+      {checkMail && t("Merci pour votre message ! Nous vous répondrons dès que possible.")}
     </div>
   </div>
 </Fragment>
