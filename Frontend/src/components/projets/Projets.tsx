@@ -9,10 +9,11 @@ import { Projectdata, Typeprojet } from "../../data/Projectdata";
 import s from "./projets.module.css";
 import { motion } from "framer-motion";
 import { BsStars } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const Projets: React.FC = () => {
   const [projets] = useState<Typeprojet[]>(Projectdata);
-
+  const { t } = useTranslation();
   return (
     <Fragment>
       <style>
@@ -84,7 +85,7 @@ const Projets: React.FC = () => {
           <BsStars size={40} className="text-black dark:text-white" />
         </motion.div>
         <h2 className="text-3xl md:text-4xl text-center font-bold text-gray-900 dark:text-white mb-4">
-          Nos projets
+          {t("Nos projets")}
         </h2>
         <div
           className={`${s.projetContainer} p-6`}

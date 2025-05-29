@@ -1,6 +1,7 @@
 {
   "about": "About",
-  "project" : "Project",
+  "Titre" : "Title",
+  "Projet" : "Project",
   "contact": "Contact",
   "Beyond the Horizon": "Beyond the Horizon",
   " We hold the keys": " We hold the keys",
@@ -89,5 +90,7 @@
   "FAQ": "FAQ",
   "Réseaux sociaux": "Social Networks",
   "Suivez-nous pour ne rien rater de nos offres.": "Follow us to never miss our offers.",
-  "Tous droits réservés.": "All rights reserved."
+  "Tous droits réservés.": "All rights reserved.",
+  "Nos projets" : "Our projects"
+
 }

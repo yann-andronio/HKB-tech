@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex space-x-10  text-gray-900 dark:text-gray-100 px-8 py-3 ">
 
-            {["Accueil", "A propos", "Services","Projets" ,  "Contact", "FAQ"].map(
+            {["Accueil", "A propos", "Services","Projet" ,  "Contact", "FAQ"].map(
               (item, index) => (
                 <ScrollLink
                   key={index}
